@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpinjs walk through</title>
+
+
+    <!-- Alpinjs -->
+    <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <div x-data="{ open: 'True' }">
+        <button x-on:click="open = ! open">Toggle Dropdown</button>
+
+        <div :class="open ? '' : 'hidden'">
+            Dropdown Contents...
+        </div>
+    </div>
+    <div x-data="{ message: ''}">
+        <input type="text" x-model="message">
+
+        <span x-text="message">
+    </div>
+    <div x-data="{username:''}">
+        <input type="text" x-model="username">
+        <span x-show="username.length > 20">The username is too long.</span>
+
+        <ul>
+            <template x-for="i in 10">
+                <li x-text="i"></li>
+            </template>
+        </ul>
+        <button @click="$refs.text.remove()">Remove Text</button>
+<span x-ref="text">Hello 👋</span>
+    </div>
+
+</body>
+</html>
