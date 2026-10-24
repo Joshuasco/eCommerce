@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node api.js && npx tailwindcss -i ./src/input.css -o ../store/static/store/css/tailwind.css --watch",
+    "dev": "node init && npx tailwindcss -i ./src/input.css -o ../store/static/store/css/tailwind.css --watch",
     "prod": "npx tailwindcss -i ./src/input.css -o ../store/static/store/css/tailwind.css --minify"
   },
   "keywords": [],
